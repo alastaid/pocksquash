@@ -27,7 +27,6 @@ if (isset($_COOKIE["email"]))
 	<span id="MainTitle">Pocklington Squash Club</span>&nbsp;
 	<p id="MainNav">&nbsp; 
 	<a href="home.php"><span class="auto-style1">Home</span></a> |
-	<a href="about.php"><span class="auto-style1">About</span></a> | 
 	<a href="leagues.php"><span class="auto-style1">Leagues</span></a> | 
 	<a href="teams.php"><span class="auto-style1">Teams</span></a> | 
 	<a href="members.php"><span class="auto-style1">Members</span></a> |
