@@ -1,0 +1,62 @@
+#!/bin/bash
+# Shell Script to move testps to live version and make modifications
+#
+# First Job - stop web server
+#
+echo Stopping web server
+/etc/init.d/apache2 stop
+#
+# Second job copy father to grandfather and live to father
+#
+echo Removing 2nd generation 
+rm -r /var/pocksquashbackup/grandfather/pocksquash
+mkdir /var/pocksquashbackup/grandfather/pocksquash
+echo Copying 1st generation to 2nd
+cp -r /var/pocksquashbackup/father/pocksquash/* /var/pocksquashbackup/grandfather/pocksquash/.
+find /var/pocksquashbackup/grandfather/pocksquash -type f -print | wc -l
+echo Removing 1st generation
+rm -r /var/pocksquashbackup/father/pocksquash
+mkdir /var/pocksquashbackup/father/pocksquash
+echo Copying Live to 1st generation
+cp -r /var/www/pocksquash/* /var/pocksquashbackup/father/pocksquash/.
+find /var/pocksquashbackup/father/pocksquash -type f -print | wc -l
+read -p "Removing Live...press any key "
+rm -r /var/www/pocksquash/*
+echo Copying testps to live
+cp -r /var/www/testps/* /var/www/pocksquash/.
+find /var/www/pocksquash -type f -print | wc -l
+echo Copying back court html files
+cp /var/pocksquashbackup/father/pocksquash/courts.html /var/www/pocksquash/courts.html
+cp /var/pocksquashbackup/father/pocksquash/m/mcourts.html /var/www/pocksquash/m/mcourts.html
+echo Changing test database to live - full site
+perl -pi -e 's/testps/livememb/g' /var/www/pocksquash/connect_to_mysql.php
+echo Changing test database to live - mobile site
+perl -pi -e 's/testps/livememb/g' /var/www/pocksquash/m/connect_to_mysql.php
+echo Changing http to https
+perl -pi -e 's/login.php/https:\/\/pocksquash.azurewebsites.net\/login.php/g' /var/www/pocksquash/headerbanner.php
+perl -pi -e 's/mlogin.php/https:\/\/pocksquash.azurewebsites.net\/m\/mlogin.php/g' /var/www/pocksquash/m/mheaderbanner.php
+perl -pi -e 's/join_form.php/https:\/\/pocksquash.azurewebsites.net\/join_form.php/g' /var/www/pocksquash/login.php
+perl -pi -e 's/mjoin_form.php/https:\/\/pocksquash.azurewebsites.net\/m\/mjoin_form.php/g' /var/www/pocksquash/m/mjoin_form.php
+perl -pi -e 's/change_password.php/https:\/\/pocksquash.azurewebsites.net\/change_password.php/g' /var/www/pocksquash/member_profile.php
+perl -pi -e 's/mchange_password.php/https:\/\/pocksquash.azurewebsites.net\/m\/mchange_password.php/g' /var/www/pocksquash/m/mmember_profile.php
+echo Changing File location references for Pictures
+perl -pi -e 's/www\/testps/www\/pocksquash/g' /var/www/pocksquash/member_profile.php
+perl -pi -e 's/www\/testps/www\/pocksquash/g' /var/www/pocksquash/edit_info.php
+perl -pi -e 's/www\/testps/www\/pocksquash/g' /var/www/pocksquash/member_detail.php
+perl -pi -e 's/www\/testps/www\/pocksquash/g' /var/www/pocksquash/edit_pic.php
+perl -pi -e 's/www\/testps/www\/pocksquash/g' /var/www/pocksquash/m/mmember_profile.php
+perl -pi -e 's/www\/testps/www\/pocksquash/g' /var/www/pocksquash/m/medit_info.php
+perl -pi -e 's/www\/testps/www\/pocksquash/g' /var/www/pocksquash/m/mmember_detail.php
+perl -pi -e 's/www\/testps/www\/pocksquash/g' /var/www/pocksquash/m/medit_pic.php
+echo Copying Python Update Scripts
+cp /home/pi/courtchecker.py /var/www/pocksquash/.
+cp /home/pi/courtreplace.py /var/www/pocksquash/.
+echo Changing Permissions
+chmod -R 764 /var/www/pocksquash/*
+chown -R www-data:www-data /var/www/pocksquash/*
+echo Restarting WebServer
+/etc/init.d/apache2 start
+
+
+# Now remove live and copy 
+
