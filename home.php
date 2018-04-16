@@ -19,8 +19,8 @@ include ("headerbanner.php")
 
 </p>
 <p>
-We are a small friendly club based out of the <a href="http://www.francisscaifesportscentre.co.uk/">Francis Scaife Sports Centre</a> in Pocklington.   The Francis Scaife Sports Centre is a 
-council run facility which has two glass backed courts that can be booked in 40 minute sessions over the phone. 
+We are a small friendly club based out of the <a href="http://leisure.eastriding.gov.uk/?centre=francis-scaife">Francis Scaife Sports Centre</a> in Pocklington.   The Francis Scaife Sports Centre is a 
+council run facility which has two glass backed courts that can be booked in 40 minute sessions online. 
 There is no subscription fee to use the courts, and each session is £7.40 per 40 
 minutes for adults, and £4.80 for juniors. If you can play squash during the day it is worth considering getting a 
 surepass card, as this includes use of the squash courts as well as the gym, 
