@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Teams</title>
+<title>PockSquash - Teams</title>
 <link rel="stylesheet" type="text/css" href="CSS/psmain.css" />
 
 </head>

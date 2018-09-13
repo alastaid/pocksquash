@@ -139,7 +139,7 @@ if (isset($_POST['email'])){
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/psmain.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Member Registration</title>
+<title>PockSquash - Member Registration</title>
 <style type="text/css">
 .auto-style1 {
 	text-align: right;

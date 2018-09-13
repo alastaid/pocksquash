@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<title>Pocklington Squash Club</title>
+<title>PockSquash - Ooops!</title>
 <meta content="Pocklington, Squash, Sports" name="keywords" />
 <link rel="stylesheet" type="text/css" href="CSS/psmain.css" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Oooops</title>
 </head>
 
 <body>

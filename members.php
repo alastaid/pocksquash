@@ -8,7 +8,7 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link rel="stylesheet" type="text/css" href="CSS/psmain.css" />
-<title>Members</title>
+<title>PockSquash - Members</title>
 </head>
 
 <body>

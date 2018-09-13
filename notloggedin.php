@@ -6,7 +6,7 @@
 <meta content="Pocklington, Squash, Sports" name="keywords" />
 <link rel="stylesheet" type="text/css" href="CSS/psmain.css" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Not Logged In</title>
+<title>PockSquash - Not Logged In</title>
 </head>
 
 <body>

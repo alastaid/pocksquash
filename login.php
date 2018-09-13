@@ -84,7 +84,7 @@ else
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/psmain.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Login to your profile</title>
+<title>PockSquash - Login</title>
 <script type="text/javascript">
 <!-- Form Validation -->
 function validate_form ( ) { 

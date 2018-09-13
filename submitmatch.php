@@ -5,7 +5,7 @@
 <meta content="en-gb" http-equiv="Content-Language" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link rel="stylesheet" type="text/css" href="CSS/psmain.css" />
-<title>Submit Match</title>
+<title>PockSquash - Submit Match</title>
 <style type="text/css">
 .auto-style1 {
 	text-align: center;

@@ -64,7 +64,7 @@ if (isset($_POST['oldpassword']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Change Password</title>
+<title>PockSquash - Change Password</title>
 <link rel="stylesheet" type="text/css" href="CSS/psmain.css" />
 </head>
 <body>
