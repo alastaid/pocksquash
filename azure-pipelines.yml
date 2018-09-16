@@ -15,5 +15,4 @@ steps:
 
 - script: |
     docker login -u $(spname) -p $(pswd) $(dockerid).azurecr.io
-    docker push $(imageName)
-#    docker push $(dockerId).azurecr.io/$(imageName)
+    docker push $(dockerId).azurecr.io/$(imageName)
