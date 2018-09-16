@@ -14,5 +14,5 @@ steps:
   displayName: 'docker build'
 
 - script: |
-    docker login -u $(dockerId).azurecr.io -p $(pswd) $(dockerid).azurecr.io
+    docker login -u $(spname).azurecr.io -p $(pswd) $(dockerid).azurecr.io
     docker push $(dockerId).azurecr.io/$(imageName)
