@@ -7,8 +7,8 @@ ENV APACHE_RUN_DIR /var/run/apache2
 RUN rm -rf /var/www/html/*
 RUN mkdir /var/run/apache2
 
-RUN echo "<!DOCTYPE html><html><body><h1>Pocksquash</h1><p>A Paragraph</p></body></html>" >> /var/www/html/index.html
-#COPY . /var/www
+#RUN echo "<!DOCTYPE html><html><body><h1>Pocksquash</h1><p>A Paragraph</p></body></html>" >> /var/www/html/index.html
+COPY $Build.SourcesDirectory/* /var/www/html/. 
 
 EXPOSE 80
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
