@@ -11,7 +11,6 @@ variables:
 
 steps:
 - script: |
-        docker login -u $(dhname) -p $(dhpswd)
         docker build -f Dockerfile -t $(dockerId).azurecr.io/$(imageName) .
         docker login -u $(spname) -p $(pswd) $(dockerid).azurecr.io
         docker push $(dockerId).azurecr.io/$(imageName)

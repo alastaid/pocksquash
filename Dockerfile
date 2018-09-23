@@ -1,4 +1,4 @@
-FROM nimmis/nimmis/apache-php7
+FROM nimmis/apache-php7:latest
 #RUN apt-get update && apt-get install -y tzdata && apt-get install -y apache2 php libapache2-mod-php curl net-tools iputils-ping && apt-get clean && rm -rf /var/lib/apt/lists/*
 #ENV APACHE_RUN_USER www-data
 #ENV APACHE_RUN_GROUP www-data
