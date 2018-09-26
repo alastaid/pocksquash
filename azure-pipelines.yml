@@ -11,7 +11,7 @@ variables:
 
 steps:
 - script: |
-        az login --service-principal -u $(spname) -p $(pswd)
+        az login --service-principal -u $(spname) -p $(pswd) --tenant "alastaidoutlook.onmicrosoft.com"
         az acr login -n $(dockerId) -u $(spname) -p $(pswd) 
         az acr build -r $(dockerId) -f Dockerfile.ARM -image $(imageName) .
         docker build -f Dockerfile -t $(dockerId).azurecr.io/$(imageName) .
