@@ -13,7 +13,7 @@ steps:
 - script: |
         az login --service-principal -u $(spname) -p $(pswd) --tenant "alastaidoutlook.onmicrosoft.com"
         az acr login -n $(dockerId) -u $(spname) -p $(pswd) 
-        az acr build -r $(dockerId) -f Dockerfile.ARM -image $(imageName) .
+        az acr build -r $(dockerId) -f Dockerfile.ARM --image $(imageName) .
         docker build -f Dockerfile -t $(dockerId).azurecr.io/$(imageName) .
         #docker login -u $(spname) -p $(pswd) $(dockerid).azurecr.io
         docker push $(dockerId).azurecr.io/$(imageName)
